@@ -1,4 +1,4 @@
-const { User, Thought, Reaction } = require("../models");
+const { User, Thought } = require("../models");
 
 module.exports = {
   // Gets all users in database
@@ -22,14 +22,14 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // Updates a user
+  // Updates a user based on ID
   updateUser(req, res) {
     User.findOneAndUpdate({ _id: req.params.userId }, { $set: req.body }, { runValidators: true, new: true })
       .then((user) => (!user ? res.status(404).json({ message: "No user with that ID" }) : res.json(user)))
       .catch((err) => res.status(500).json(err));
   },
 
-  // Deletes a user
+  // Deletes a user based on ID and their associated thoughts
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
       .then((user) => (!user ? res.status(404).json({ message: "no user with that ID" }) : Thought.deleteMany({ _id: { $in: user.thoughts } })))
