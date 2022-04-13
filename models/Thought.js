@@ -15,8 +15,7 @@ const thoughtSchema = new Schema(
       immutable: true,
     },
     username: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
+      type: String,
       required: true,
     },
     reactions: [Reaction],
