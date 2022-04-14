@@ -4,15 +4,6 @@
 
 This project uses MongoDB and Mongoose to build and structure an API for a social network. Users can share their thoughts, react to their friends thoughts and create a friend list. I have used a NoSQL database due to the unstructured nature of the data.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
 ## Installation
 
 The project will need to be cloned from the github repo, once this is done please run npm install to download the relevant dependencies for the project. After the install has completed running npm start will begin the server to test the API.
