@@ -8,6 +8,8 @@ This project uses MongoDB and Mongoose to build and structure an API for a socia
 
 The project will need to be cloned from the github repo, once this is done please run npm install to download the relevant dependencies for the project. After the install has completed running npm start will begin the server to test the API.
 
+To run this project on your computer MongoDB will need to be installed. Also as this is only a backend you will need to test the paths in a testing platform such as Postman or Insomnia.
+
 ## Usage
 
 This project shows how the back end of a social network API would function using a NoSQL database. There are different models that interact with each other that allow a user to add or remove friends, to edit their information and to create thoughts. These thoughts can be edited or deleted and a user can react to their friends thoughts. This is done using a CRUD API.
@@ -22,6 +24,7 @@ For this project I have used:
 
 - JavaScript
 - Express
+- Moment
 - MongoDB
 - Mongoose ODM
 
